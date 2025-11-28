@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    /* primary colors */
+    --blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* nuetral colors */
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line-clr: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /* font weight */
+    --light: 300;
+    --normal: 400;
+    --bold: 600;
+
+    /* box shadow */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+main {
+    font-family: Outfit;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+article{
+    max-width: 330px;
+    border-radius: 1em;
+    height: auto;
+    padding: 20px;
+    background-color: var(--card-bg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.image-con {
+    position: relative;
+    border-radius: 1em;
+}
+
+.overlay {
+    position: absolute;
+    border-radius: 1em;
+    opacity: 0;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cyan);
+    transition: opacity 0.3s ease;
+}
+
+.image-con:hover
+.overlay{
+    opacity: .5;
+}
+
+.eye-icon{
+    width: 48px;
+    height: 48px;
+}
+
+.equilibrium{
+    width: 100%;
+    border-radius: 1em;
+}
+
+a{
+    text-decoration: none;color: var(--white);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:active {
+    color: var(--cyan);
+    /* transition: color 0.3s ease; */
+}
+
+h1{
+    font-weight: var(--bold);
+    margin-block: .5em;
+}
+
+.desc{
+    font-weight: var(--light);
+    color: var(--blue);
+    font-size: 18px;
+    line-height: 1.25;
+    margin-bottom: .5em;
+}
+
+.eth-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+
+    img{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    .eth-value {
+        color: var(--cyan);
+        font-weight: var(--bold);
+    }
+
+    .days-left{
+        color: var(--blue);
+    }
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--line-clr);
+    margin: 1.5em 0;
+}
+
+.creator-name{
+    font-weight: var(--light);
+    color: var(--blue);
+
+    img{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        width: 35px;
+        border: 2px solid var(--white);
+        border-radius: 20px;
+        height: 35px;
+    }
+
+    span{
+        color: var(--white);
+    }
+}
